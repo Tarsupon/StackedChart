@@ -1,0 +1,60 @@
+{
+  "kek": {
+    "lol": "lol"
+  },
+
+  "monthlyWorkloadBar": [
+    {
+      "month": "Sep",
+      "projectsWorkloadBar": [
+        {
+          "project": {
+            "name": "Skype",
+            "color": "#1871FF",
+            "workload": "2"
+          }
+        },
+        {
+          "project": {
+            "name": "Office",
+            "color": "#1221FF",
+            "workload": "1"
+          }
+        },
+        {
+          "project": {
+            "name": "Word",
+            "color": "#FF5635",
+            "workload": "3"
+          }
+        }
+      ]
+    },
+    {
+      "month": "Oct",
+      "projectsWorkloadBar": [
+        {
+          "project": {
+            "name": "Skype",
+            "color": "#1871FF",
+            "workload": "2"
+          }
+        },
+        {
+          "project": {
+            "name": "Office",
+            "color": "#1221FF",
+            "workload": "1"
+          }
+        },
+        {
+          "project": {
+            "name": "Word",
+            "color": "#FF5635",
+            "workload": "3"
+          }
+        }
+      ]
+    }
+  ]
+}
