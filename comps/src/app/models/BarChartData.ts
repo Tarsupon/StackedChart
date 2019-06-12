@@ -18,8 +18,11 @@ export class BarChartData {
   private createDataset(monthlyBars: MonthlyWorkloadBar[]): {labels: string[], datasets: DataSet[]} {
     let labels: string[] = monthlyBars.map((data) => data.month);
 
+    let monthNumber: number = 0;
     let datasets: DataSet[] = [];
     monthlyBars.map(data => {
+      monthNumber++;
+
       data.projectsWorkloadBar.map((currentProject: Project) => {
         let projectsNumber: number = data.projectsWorkloadBar.length;
         let iterator: number = 0;
@@ -28,13 +31,14 @@ export class BarChartData {
         datasets.forEach((set) =>{
           if (set.label !== currentProject.name) iterator++;
         });
-        
+
         if (existedProject) {
           existedProject.data.push(currentProject.workload);
           return;
         }
+
         if (projectsNumber <= iterator) {
-          const dataSet: DataSet = new DataSet(currentProject, iterator);
+          const dataSet: DataSet = new DataSet(currentProject, monthNumber);
           datasets.push(dataSet);
         } else {
           const dataSet: DataSet = new DataSet(currentProject);

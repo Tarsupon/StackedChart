@@ -8,6 +8,11 @@
       "month": "Sep",
       "projectsWorkloadBar": [
         {
+          "name": "DarkSide",
+          "color": "#00000F",
+          "workload": "5"
+        },
+        {
             "name": "Skype",
             "color": "#1871FF",
             "workload": "2"
@@ -94,6 +99,7 @@
           "workload": "5"
 
         }
+
       ]
     }
   ]

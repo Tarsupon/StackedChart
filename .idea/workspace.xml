@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1488a36-36f6-4355-8dba-dda659ee0025" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/comps/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/comps/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/comps/src/app/models/BarChartData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/comps/src/app/models/BarChartData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comps/src/app/models/MonthlyWorkloadBar.ts" beforeDir="false" afterPath="$PROJECT_DIR$/comps/src/app/models/MonthlyWorkloadBar.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comps/src/app/models/ProjectsWorkloadBar.ts" beforeDir="false" afterPath="$PROJECT_DIR$/comps/src/app/models/ProjectsWorkloadBar.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comps/src/app/stacked-chart/stacked-chart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/comps/src/app/stacked-chart/stacked-chart.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -51,20 +47,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/comps/db.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-786">
-              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+            <state relative-caret-position="438">
+              <caret line="105" column="9" selection-start-line="105" selection-start-column="9" selection-end-line="105" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/comps/src/app/models/BarChartData.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+            <state relative-caret-position="323">
+              <caret line="40" column="74" selection-start-line="40" selection-start-column="74" selection-end-line="40" selection-end-column="74" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
               </folding>
@@ -116,8 +112,8 @@
         <option value="$PROJECT_DIR$/comps/src/app/models/ProjectsWorkloadBar.ts" />
         <option value="$PROJECT_DIR$/comps/src/app/models/MonthlyWorkloadBar.ts" />
         <option value="$PROJECT_DIR$/comps/src/app/stacked-chart/stacked-chart.component.ts" />
-        <option value="$PROJECT_DIR$/comps/db.json" />
         <option value="$PROJECT_DIR$/comps/src/app/models/BarChartData.ts" />
+        <option value="$PROJECT_DIR$/comps/db.json" />
       </list>
     </option>
   </component>
@@ -231,12 +227,12 @@
       <workItem from="1559830647488" duration="22976000" />
       <workItem from="1560072827788" duration="236000" />
       <workItem from="1560073762929" duration="22033000" />
-      <workItem from="1560335690947" duration="9055000" />
+      <workItem from="1560335690947" duration="11532000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54908000" />
+    <option name="totallyTimeSpent" value="57385000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -332,13 +328,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/comps/src/app/models/ProjectsWorkloadBar.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/comps/src/app/stacked-chart/stacked-chart-service.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -363,13 +352,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/comps/db.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-786">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/comps/src/app/models/MonthlyWorkloadBar.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -384,13 +366,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/comps/src/app/models/ProjectsWorkloadBar.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/comps/src/app/models/BarChartData.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+        <state relative-caret-position="323">
+          <caret line="40" column="74" selection-start-line="40" selection-start-column="74" selection-end-line="40" selection-end-column="74" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comps/db.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="105" column="9" selection-start-line="105" selection-start-column="9" selection-end-line="105" selection-end-column="9" />
         </state>
       </provider>
     </entry>
