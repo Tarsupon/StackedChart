@@ -2,9 +2,11 @@ import {Component, Input, OnInit} from '@angular/core';
 import * as Chart from 'chart.js';
 import {MonthlyWorkloadBar} from "../models/MonthlyWorkloadBar";
 import {StackedChartServiceService} from "./stacked-chart-service.service";
-import {BarChartData, DataSet} from "../models/BarChartData";
+// import {BarChartData, DataSet} from "../models/BarChartData";
 import {Project} from "../models/Project";
 import {ProjectsWorkloadBar} from "../models/ProjectsWorkloadBar";
+import {filter} from "rxjs/operators";
+import {BarChartData} from "../models/BarChartData";
 
 @Component({
   selector: 'app-stacked-chart',
@@ -25,72 +27,16 @@ export class StackedChartComponent implements OnInit {
   private chart: Chart;
   private chartName: string = 'testName';
 
-  //   {
-  //   labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-  //   datasets: [{
-  //     label: 'Skype',
-  //     backgroundColor: 'rgb(255,86,53)',
-  //     data: [5, 3, 4, 7, 2, 1, 2]
-  //   }, {
-  //     label: 'Word',
-  //     backgroundColor: 'rgb(253,68,255)',
-  //     data: [2, 1, 3, 2, 4, 5, 2]
-  //   }, {
-  //     label: 'LinkedIn',
-  //     backgroundColor: 'rgb(24,113,255)',
-  //     data: [3, 2, 4, 1, 3, 2, 1]
-  //   }]
-  //
-  // };
-
   monthlyWorkloadBars: MonthlyWorkloadBar[] = [];
   private resultDataset: BarChartData;
 
-  private createDataset() {
-    this.monthlyWorkloadBars.forEach((data) => {
-      for (let i = 0; i <= this.monthlyWorkloadBars.length; i++) {
-        this.resultDataset.labels.push(data[i].month);
-        console.log(this.resultDataset.labels);
-      }
-    });
-    this.monthlyWorkloadBars.map( data =>{
-      data.projectsWorkloadBar.map( (set: ProjectsWorkloadBar) =>{
-        set.projectsWorkloadBar.map((project: Project) => {
-          const dataSet: DataSet = new DataSet();
-          dataSet.label = project.name;
-          dataSet.backgroundColor = project.color;
-          dataSet.data.push(project.workload);
-
-          this.resultDataset.datasets.push(dataSet);
-        })
-      })
-    });
+  private createChartName(monthlyBars: MonthlyWorkloadBar[]): string {
+    let labels: string[] = monthlyBars.map((data) => data.month);
+    return `${labels[0]} - ${labels[labels.length - 1]}`;
   }
-  // labels: string[] = [];
-  // datasets: DataSet[] = [];
-  // projects: Project[] = [];
-  // names: string[] = [];
 
-  constructor(private stackedChartService: StackedChartServiceService) {}
-
-  ngOnInit() {
-    this.stackedChartService.getData().subscribe((data : MonthlyWorkloadBar)  => this.monthlyWorkloadBars.push(data));
-
-    // this.stackedChartService.getData().subscribe((data: MonthlyWorkloadBar) =>{
-    //   for (let i = 0; i <= this.monthlyWorkloadBars.length; i++) {
-    //     this.labels.push(data[i].month);
-    //
-    //     data[i].projectsWorkloadBar.forEach( (project: Project) => {
-    //       for (let j = 0; j <= data[i].projectsWorkloadBar.length; j++) {
-    //         this.names.push(project[j].name);
-    //       }
-    //     });
-    //     console.log(this.names)
-    //   }
-    //   this.barChartData.labels = this.labels;
-    // });
-
-    this.chart = new Chart('canvas', {
+  private createNewChart(): Chart {
+    return new Chart('canvas', {
       type: this.STACKED_BAR_CHART,
       data: this.resultDataset,
       options: {
@@ -135,4 +81,14 @@ export class StackedChartComponent implements OnInit {
     });
   }
 
+  constructor(private stackedChartService: StackedChartServiceService) {}
+
+  ngOnInit() {
+    this.stackedChartService.getData().pipe( filter(data => !!data)).subscribe((data : MonthlyWorkloadBar[])  => {
+      this.monthlyWorkloadBars = data;
+      this.resultDataset = new BarChartData(this.monthlyWorkloadBars);
+      this.chartName = this.createChartName(this.monthlyWorkloadBars);
+      this.chart = this.createNewChart();
+    });
+  }
 }

@@ -1,5 +1,5 @@
 import {Project} from "./Project";
 
-export interface ProjectsWorkloadBar {
+export class ProjectsWorkloadBar {
   projectsWorkloadBar: Project[];
 }

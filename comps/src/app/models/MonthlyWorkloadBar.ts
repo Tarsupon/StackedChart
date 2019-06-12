@@ -1,6 +1,6 @@
-import {ProjectsWorkloadBar} from "./ProjectsWorkloadBar";
+import {Project} from "./Project";
 
-export interface MonthlyWorkloadBar {
+export class MonthlyWorkloadBar {
   month: string;
-  projectsWorkloadBar: ProjectsWorkloadBar[];
+  projectsWorkloadBar: Project[];
 }
